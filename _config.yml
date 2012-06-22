@@ -9,13 +9,13 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Space Cowboy
-tagline: Because science works!
+title : Thoughts on Android
+tagline: Code, good and bad. Go ahead and copy paste
 author :
   name : Jonas Kalderstam
   email : jonas@nononsenseapps.com
   github : spacecowboy
-  twitter : sciencyguy
+  twitter : 
   feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
