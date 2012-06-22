@@ -1,0 +1,38 @@
+<div class="page-header">
+  <h1>{{ page.title }} <small>Supporting tagline</small></h1>
+</div>
+
+<div class="row">
+  <div class="span4">
+    <ul>
+      {% for opage in site.pages %}
+        {% if page.group == opage.group %}
+          {% if page.title == opage.title %}
+            <li>{{ opage.title }}</li>
+          {% else %}
+            <li><a href="{{ BASE_PATH }}{{ opage.url }}" title="{{ opage.title }}">{{ opage.title }}</a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="span10">
+    {{ content }}
+    <hr>
+    <div class="pagination">
+      <ul>
+      {% if page.jprevious %}
+        <li class="prev"><a href="{{ page.jqprevious.url }}" title="{{ page.jprevious.title }}">&larr; Previous</a></li>
+      {% else %}
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+      {% endif %}
+      {% if page.jnext %}
+        <li class="next"><a href="{{ page.jnext.url }}" title="{{ page.jnext.title }}">Next &rarr;</a></li>
+      {% else %}
+        <li class="next disabled"><a>Next &rarr;</a>
+      {% endif %}
+      </ul>
+    </div>
+  </div>
+  
+</div>
